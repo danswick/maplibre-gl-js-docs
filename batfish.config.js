@@ -11,19 +11,7 @@ const {
     buildFilters
 } = require('@mapbox/dr-ui/helpers/batfish/index.js');
 
-const addPages = [
-    // {
-    //     title: 'Tutorials',
-    //     path: 'https://docs.mapbox.com/help/tutorials?product=Mapbox+GL+JS',
-    //     navOrder: 5
-    // },
-    // {
-    //     title: 'Troubleshooting',
-    //     path:
-    //         'https://docs.mapbox.com/help/troubleshooting?product=Mapbox+GL+JS',
-    //     navOrder: 6
-    // }
-];
+const addPages = [];
 
 const siteBasePath = '/maplibre-gl-js-docs';
 module.exports = () => {

@@ -4,7 +4,6 @@ import Downshift from 'downshift';
 import Fuse from 'fuse.js';
 import apiSearch from '@mapbox/batfish/data/api-search'; // eslint-disable-line
 import classnames from 'classnames';
-import * as Sentry from '@sentry/browser';
 import { routeTo } from '@mapbox/batfish/modules/route-to';
 
 export default class ApiSearch extends React.Component {
@@ -48,8 +47,7 @@ export default class ApiSearch extends React.Component {
             // clear search
             this.setState({ filter: '' });
         } catch (err) {
-            Sentry.setContext('selection', selection);
-            Sentry.captureException(err);
+            console.log(err);
         }
     };
 

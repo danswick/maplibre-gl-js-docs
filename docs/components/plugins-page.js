@@ -10,11 +10,7 @@ export default class Plugins extends React.Component {
     render() {
         return (
             <div>
-                <div
-                    id="plugins"
-                    className="plugins-page"
-                    data-swiftype-index="true"
-                >
+                <div id="plugins" className="plugins-page">
                     {entries(plugins).map(([title, plugins], i) => (
                         <div key={i} className="">
                             <a

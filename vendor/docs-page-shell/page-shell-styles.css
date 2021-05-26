@@ -58,24 +58,6 @@
   color: inherit;
   text-decoration: none;
 }
-@font-face {
-  font-family: 'Open Sans';
-  font-weight: 400;
-  /* Notice the absolute URLs! */
-  src: url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-regular.v1.woff2')
-      format('woff2'),
-    url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-regular.v1.woff')
-      format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-weight: bold;
-  /* Notice the absolute URLs! */
-  src: url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-bold.v1.woff2')
-      format('woff2'),
-    url('https://api.mapbox.com/mapbox-assembly/fonts/opensans-bold.v1.woff')
-      format('woff');
-}
 
 /* Typography */
 .shell-wrapper .shell-txt-bold {
@@ -477,18 +459,8 @@
   overflow: hidden !important;
 }
 
-/* mapbox-assembly Typography */
-@font-face {
-  font-family: 'Cera';
-  font-weight: 700;
-  /* Notice the absolute URLs! */
-  src: url('https://api.mapbox.com/mapbox-assembly/mbx/v0.14.0/CeraPRO-Bold.woff2')
-      format('woff2'),
-    url('https://api.mapbox.com/mapbox-assembly/mbx/v0.14.0/CeraPRO-Bold.woff')
-      format('woff');
-}
 .shell-wrapper .shell-txt-fancy {
-  font-family: 'Cera', sans-serif !important;
+  font-family: sans-serif !important;
 }
 
 /* mapbox-assembly Branding */

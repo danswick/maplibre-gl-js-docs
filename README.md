@@ -60,12 +60,7 @@ In the `.html` file, write the HTML and JavaScript constituting the example.
 * Do **not** use custom styles from your personal account. Use only the default `mapbox` account styles.
 * On commit, Prettier will format the code for all files, including HTML.
 
-Every example **must** have an accompanying image. To get an image, run the site locally and take a screenshot of the rendered map in the example:
-
-1. Run `npm run create-image <example-file-name> <mapbox-access-token>`. The script will take a screenshot of the map in the example and save it to `docs/img/src/`. Commit the image.
-2. Run `npm start` to verify that your example image is loading as expected.
-
-💡 If `npm run create-image` does not generate an ideal image. You can also take a screenshot of it yourself by running the site locally with `npm start` and taking a screenshot of the example map in PNG format. Resize it to 1200 x 500 pixels and save it in the `docs/img/src` folder.
+Every example **must** have an accompanying image. To get an image, run the site locally and take a screenshot of the rendered map in the example, then run `npm start` to verify that your example image is loading as expected.
 
 ## Running the Documentation Server Locally
 

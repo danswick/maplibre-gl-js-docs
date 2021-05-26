@@ -4,8 +4,11 @@ import PropTypes from 'prop-types';
 import ReactPageShell from '../../vendor/docs-page-shell/react-page-shell.js';
 // dr-ui components
 import AnalyticsShell from '@mapbox/dr-ui/analytics-shell';
-import PageLayout from '@mapbox/dr-ui/page-layout';
-import { buildMeta, findParentPath } from '@mapbox/dr-ui/page-layout/utils';
+import PageLayout from '../components/layouts/page-layout/page-layout';
+import {
+    buildMeta,
+    findParentPath
+} from '../components/layouts/page-layout/utils';
 // site variables
 import constants from '../constants';
 // batfish modules
