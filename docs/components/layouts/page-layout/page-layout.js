@@ -155,7 +155,7 @@ export default class PageLayout extends React.PureComponent {
 PageLayout.defaultProps = {
     domain: {
         title: 'All docs',
-        path: 'https://docs.mapbox.com'
+        path: 'https://maplibre.org/maplibre-gl-js-docs/'
     }
 };
 
