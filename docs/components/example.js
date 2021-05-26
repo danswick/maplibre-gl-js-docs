@@ -51,7 +51,6 @@ ${html}
 <meta charset=utf-8 />
 <title>${this.props.frontMatter.title}</title>
 ${viewport}
-
 <script src='${urls.js({ local: true })}'></script>
 <link href='${urls.css({ local: true })}' rel='stylesheet' />
 <style>
