@@ -232,15 +232,10 @@ PageLayout.propTypes = {
     /**
 - `SITE` - the name of the site.
 - `BASEURL` - the base url of the website, as used in the batfish.config.js
-- `FORWARD_EVENT_WEBHOOK` - an object with to values: `production` and `staging`.
 */
     constants: PropTypes.shape({
         SITE: PropTypes.string.isRequired,
-        BASEURL: PropTypes.string.isRequired,
-        FORWARD_EVENT_WEBHOOK: PropTypes.shape({
-            production: PropTypes.string.isRequired,
-            staging: PropTypes.string.isRequired
-        }).isRequired
+        BASEURL: PropTypes.string.isRequired
     }).isRequired,
     /** Required if using the `exampleIndex` layout along with `imageId`s. The value is the local `AppropriateImage` component. */
     AppropriateImage: PropTypes.func,

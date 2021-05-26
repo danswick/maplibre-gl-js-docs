@@ -133,11 +133,7 @@ ContentWrapper.propTypes = {
     section: PropTypes.string,
     constants: PropTypes.shape({
         SITE: PropTypes.string.isRequired,
-        BASEURL: PropTypes.string.isRequired,
-        FORWARD_EVENT_WEBHOOK: PropTypes.shape({
-            production: PropTypes.string.isRequired,
-            staging: PropTypes.string.isRequired
-        }).isRequired
+        BASEURL: PropTypes.string.isRequired
     }).isRequired,
     layoutConfig: PropTypes.shape({
         layout: PropTypes.string,

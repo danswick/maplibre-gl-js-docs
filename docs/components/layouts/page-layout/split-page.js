@@ -9,9 +9,5 @@ export default class SplitPage extends React.PureComponent {
 }
 
 SplitPage.propTypes = {
-    children: PropTypes.node,
-    constants: PropTypes.shape({
-        SITE: PropTypes.string,
-        FORWARD_EVENT_WEBHOOK: PropTypes.object
-    })
+    children: PropTypes.node
 };

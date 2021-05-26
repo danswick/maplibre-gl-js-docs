@@ -1,8 +1,4 @@
 {
   "SITE": "MapLibre GL JS Docs",
-  "BASEURL": "/maplibre-gl-js-docs",
-  "FORWARD_EVENT_WEBHOOK": {
-    "staging": "#",
-    "production": "#"
-  }
+  "BASEURL": "/maplibre-gl-js-docs"
 }
