@@ -101,8 +101,7 @@ function BrowserCompatibilityWarning() {
     id: "page-shell-compatibility-warning",
     style: {
       display: 'none'
-    },
-    "data-swiftype-index": "false"
+    }
   }, React.createElement("div", {
     className: "shell-py12 shell-px24 shell-bg-pink shell-color-white shell-align-l"
   }, React.createElement("button", {
@@ -249,8 +248,6 @@ var navigationMenuData = {
 };
 
 var ORIGIN_DOCS_PRODUCTION = 'https://maplibre.org/maplibre-gl-js-docs';
-var DEFAULT_SOCIAL_IMAGE_URL = 'https://static-assets.mapbox.com/branding/social/social-1200x630.v1.png';
-var DEFAULT_SOCIAL_IMAGE_THUMBNAIL_URL = 'https://static-assets.mapbox.com/branding/social/social-120x120.v1.png';
 
 var MOBILE_HEADER_HEIGHT = 72;
 
@@ -374,8 +371,7 @@ function PageHeader(props) {
   }
 
   return React.createElement("header", {
-    className: "shell-absolute shell-w-full shell-z1",
-    "data-swiftype-index": "false"
+    className: "shell-absolute shell-w-full shell-z1"
   }, React.createElement("div", {
     className: "shell-none limiter limiter--wide shell-mt24 shell-flex-parent-mm shell-flex-parent--center-cross"
   }, React.createElement(Logo, {
@@ -465,8 +461,7 @@ FooterSocialMediaStrip.propTypes = {
 function PageFooter() {
   return React.createElement("footer", {
     id: "page-footer",
-    className: "shell-py12 shell-py48-ml",
-    "data-swiftype-index": "false"
+    className: "shell-py12 shell-py48-ml"
   }, React.createElement("div", {
     className: "limiter limiter--wide"
   }, React.createElement("div", {
@@ -556,154 +551,6 @@ var removeMarkdown = function (md, options) {
   return output;
 };
 
-function MetaTagger(props) {
-  var title = titleGenerator_2(props.title, props.subsite, props.site).join(' | ');
-  var suffixedTitle = "".concat(title, " | MapLibre");
-  var preppedDescription = props.description.replace(/\s+/g, ' ');
-  var prodUrl = 'https://maplibre.org';
-  if (props.pathname[0] !== '/') prodUrl += '/';
-  prodUrl += props.pathname;
-  var metaItems = [{
-    name: 'description',
-    content: removeMarkdown(preppedDescription)
-  }];
-  metaItems.push({
-    name: 'twitter:title',
-    content: title
-  }, {
-    property: 'og:title',
-    content: title
-  }, {
-    name: 'twitter:description',
-    content: removeMarkdown(preppedDescription)
-  }, {
-    property: 'og:description',
-    content: removeMarkdown(preppedDescription)
-  }, {
-    property: 'og:url',
-    content: prodUrl
-  }, {
-    property: 'og:type',
-    content: 'website'
-  }, {
-    class: 'swiftype',
-    name: 'title',
-    'data-type': 'string',
-    content: props.title
-  }, {
-    class: 'swiftype',
-    name: 'excerpt',
-    'data-type': 'string',
-    content: removeMarkdown(props.description)
-  }, {
-    name: 'twitter:image:alt',
-    content: props.imageAlt
-  }, {
-    property: 'og:image',
-    content: props.imageUrl
-  }, {
-    class: 'swiftype',
-    name: 'image',
-    'data-type': 'enum',
-    content: props.imageUrl
-  }, {
-    class: 'swiftype',
-    name: 'site',
-    'data-type': 'string',
-    content: props.site
-  });
-
-  if (props.subsite) {
-    metaItems.push({
-      class: 'swiftype',
-      name: 'subsite',
-      'data-type': 'string',
-      content: props.subsite
-    });
-  }
-
-  if (props.contentType) {
-    metaItems.push({
-      class: 'swiftype',
-      name: 'contentType',
-      'data-type': 'string',
-      content: props.contentType
-    });
-  }
-
-  if (props.language) {
-    props.language.forEach(function (language) {
-      metaItems.push({
-        class: 'swiftype',
-        name: 'codeLanguage',
-        'data-type': 'string',
-        content: language
-      });
-    });
-  }
-
-  if (props.level) {
-    metaItems.push({
-      class: 'swiftype',
-      name: 'level',
-      'data-type': 'string',
-      content: props.level
-    });
-  }
-
-  if (props.largeImage) {
-    metaItems.push({
-      name: 'twitter:card',
-      content: 'summary_large_image'
-    }, {
-      name: 'twitter:image',
-      content: props.imageUrl
-    });
-  } else {
-    metaItems.push({
-      name: 'twitter:card',
-      content: 'summary'
-    }, {
-      name: 'twitter:image',
-      content: props.imageUrlThumbnail
-    });
-  }
-
-  if (props.hideFromSearchEngines) {
-    metaItems.push({
-      name: 'robots',
-      content: 'noindex, nofollow'
-    });
-  }
-
-  return React.createElement(Helmet__default, {
-    title: suffixedTitle,
-    meta: metaItems
-  });
-}
-
-MetaTagger.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  pathname: PropTypes.string.isRequired,
-  site: PropTypes.string.isRequired,
-  subsite: PropTypes.string,
-  contentType: PropTypes.string,
-  imageUrl: PropTypes.string,
-  imageUrlThumbnail: PropTypes.string,
-  imageAlt: PropTypes.string,
-  largeImage: PropTypes.bool,
-  language: PropTypes.array,
-  level: PropTypes.number,
-  hideFromSearchEngines: PropTypes.bool
-};
-MetaTagger.defaultProps = {
-  imageUrl: DEFAULT_SOCIAL_IMAGE_URL,
-  imageUrlThumbnail: DEFAULT_SOCIAL_IMAGE_THUMBNAIL_URL,
-  imageAlt: 'MapLibre',
-  largeImage: true
-};
-
 var lastUrl;
 
 var ReactPageShell =
@@ -742,15 +589,6 @@ function (_React$Component) {
       var _this = this;
 
       MapboxPageShell.initialize();
-      MapboxPageShell.afterUserCheck(function () {
-        if (_this.props.onUser) {
-          _this.props.onUser(MapboxPageShell.getUser(), MapboxPageShell.getUserPublicAccessToken());
-        }
-
-        MapboxPageShell.loadUserMenu({
-          dark: _this.props.darkHeaderText
-        });
-      });
     }
   }, {
     key: "render",
@@ -768,10 +606,7 @@ function (_React$Component) {
         style: {
           minHeight: '100vh'
         }
-      }, React.createElement(PageHelmet, null), React.createElement(MetaTagger, _extends({}, this.props.meta, {
-        site: this.props.site,
-        subsite: this.props.subsite
-      })), React.createElement("div", {
+      }, React.createElement(PageHelmet, null), React.createElement("div", {
         className: nonFooterClasses
       }, React.createElement("div", {
         className: "shell-wrapper"
